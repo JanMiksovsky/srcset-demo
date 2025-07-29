@@ -10,7 +10,7 @@
     "projectType": "generated_static"
   },
   "scripts": {
-    "build": "ori copy src/site.ori, clean files:build",
+    "build": "ori copy src/site.ori, clear files:build",
     "start": "ori serve watch src, =debug src/site.ori"
   }
 }

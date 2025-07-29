@@ -1,5 +1,10 @@
 {
-  images/
-  index.html = index.ori.html(images/)
-  thumbnails = Tree.map(images/, (_) => Origami.image.resize(_, { width: 200 }))
+  // Expand the original images folder with our desired formats
+  images/ = imageFormats.js(<images/>, formats.yaml)
+
+  // Index page uses thumbnails
+  index.html = index.ori.html(<images/>)
+
+  // Each image gets a page with a large responsive image
+  pages/ = Tree.map(<images/>, imagePage.ori.html)
 }

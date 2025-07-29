@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Nature</title>
-  <style>
-    a {
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Nature</h1>
-  ${ map(_, (image, filename) => `
-  <a href="images/${ filename }">
-    <img src="thumbnails/${ filename }">
-  </a>
-  `) }
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nature</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nature</h1>
+    ${ map(_, (image, filename) => `
+    <a href="pages/${ basename(filename) }.html">
+      <img src="images/${ basename(filename) }-w200.avif" />
+    </a>
+    `) }
+  </body>
 </html>
