@@ -1,4 +1,4 @@
-This demonstrates generating responsive images in an Origami site.
+This [demo](https://origami-srcset-demo.netlify.app) generates responsive images in an Origami site.
 
 # Background
 
