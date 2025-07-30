@@ -1,9 +1,9 @@
 {
-  "name": "gallery-demo",
+  "name": "srcset-demo",
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@weborigami/origami": "0.3.4-jse.5"
+    "@weborigami/origami": "0.3.4-jse.6"
   },
   "license": "MIT",
   "scripts": {
