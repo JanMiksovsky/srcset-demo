@@ -1,6 +1,7 @@
 import { Tree } from "@weborigami/async-tree";
 import path from "node:path";
-import { imageFormatRegex } from "./imageFormats.js";
+
+const imageFormatRegex = /(w(?<width>\d+))?.(?<type>avif|gif|png|tiff|webp)$/;
 
 /**
  * Generate a `srcset` attribute for a responsive image HTML tag for the given
@@ -16,10 +17,10 @@ export default async function srcset(imagePath, formatsTreelike) {
   const candidates = formats.map((format) => {
     const match = format.match(imageFormatRegex);
     if (!match) {
-      return `${imagePath}${format}`;
+      return `${imagePath}-${format}`;
     } else {
       const { width } = match?.groups;
-      let candidate = `${imageDir}/${imageBasename}${format}`;
+      let candidate = `${imageDir}/${imageBasename}-${format}`;
       if (width) {
         candidate += ` ${width}w`;
       }

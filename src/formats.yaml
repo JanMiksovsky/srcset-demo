@@ -1,4 +1,5 @@
-# The widths/formats we want for this project
-- -w200.avif
-- -w1000.avif
-- -w2000.avif
+# Array of the widths/formats we want for this project.
+# E.g., we could also use WebP.
+- w200.avif
+- w1000.avif
+- w2000.avif

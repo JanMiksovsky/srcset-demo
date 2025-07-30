@@ -1,10 +1,10 @@
 {
   // Expand the original images folder with our desired formats
-  images/ = imageFormats.js(<images/>, formats.yaml)
+  images/ = imageFormats.js(originals/, formats.yaml)
 
-  // Index page uses thumbnails
-  index.html = index.ori.html(<images/>)
+  // Index page shows thumbnaisl for all images
+  index.html = index.ori.html(originals/)
 
   // Each image gets a page with a large responsive image
-  pages/ = Tree.map(<images/>, imagePage.ori.html)
+  pages/ = Tree.map(originals/, imagePage.ori.html)
 }

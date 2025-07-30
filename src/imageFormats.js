@@ -2,7 +2,7 @@ import { Tree } from "@weborigami/async-tree";
 import { basename, extension, format, resize } from "@weborigami/origami";
 
 export const imageFormatRegex =
-  /^(?<basename>[^\-\.].*?)?(-w(?<width>\d+))?.(?<type>avif|gif|png|tiff|webp)$/;
+  /^(?<basename>[^\-\.].*?)?-(w(?<width>\d+))?.(?<type>avif|gif|png|tiff|webp)$/;
 
 /**
  * Given a tree that contains some .jpg/.jpeg images, return a new tree with the
@@ -72,7 +72,7 @@ export default async function imageFormats(treelike, formatsTreelike) {
         if (ext === ".jpg" || ext === ".jpeg") {
           const base = basename(key);
           for (const format of formats) {
-            result.add(`${base}${format}`);
+            result.add(`${base}-${format}`);
           }
         }
       }
