@@ -23,6 +23,8 @@ This project uses Origami to address the two needs described above:
 1. To generate the images, map the folder of original images to a new, virtual folder that contains the copies of the originals in the desired sizes and formats.
 2. For each `<img>` tag, invoke a helper function that generates an appropriate `srcset` attribute for it.
 
+Both tasks are accomplished with functions that you call yourself. Since you control where and when those functions are called, you can adapt this solution if you need something different.
+
 # Formats
 
 Both these tasks require us to identify the sizes and formats we want for our responsive images. This can be done in array of strings that encode the size and format. In this demo, the strings look like: `.webp` or `w500.avif`.
