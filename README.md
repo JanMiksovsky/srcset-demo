@@ -27,7 +27,7 @@ Both tasks are accomplished with functions that you call yourself. Since you con
 
 # Formats
 
-Both these tasks require us to identify the sizes and formats we want for our responsive images. This can be done in array of strings that encode the size and format. In this demo, the strings look like: `.webp` or `w500.avif`.
+We will need to identify the sizes and formats we want for our responsive images. This can be done in array of strings that encode the size and format. In this demo, the strings look like: `.webp` or `w500.avif`.
 
 In order to share the same array of size/format strings across the project, this array is stored in YAML format in the file `src/formats.yaml`:
 
