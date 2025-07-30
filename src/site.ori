@@ -2,7 +2,7 @@
   // Expand the original images folder with our desired formats
   images/ = imageFormats.js(originals/, formats.yaml)
 
-  // Index page shows thumbnaisl for all images
+  // Index page shows thumbnails for all images
   index.html = index.ori.html(originals/)
 
   // Each image gets a page with a large responsive image

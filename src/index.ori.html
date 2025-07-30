@@ -12,10 +12,10 @@
   </head>
   <body>
     <h1>Nature</h1>
-    ${ map(_, (image, filename) => `
-    <a href="pages/${ basename(filename) }.html">
-      <img src="images/${ basename(filename) }-w200.avif" />
-    </a>
+    ${ map(_, (image, filename) => Tree.indent`
+      <a href="pages/${ basename(filename) }.html">
+        <img src="images/${ basename(filename) }-w200.avif">
+      </a>
     `) }
   </body>
 </html>
