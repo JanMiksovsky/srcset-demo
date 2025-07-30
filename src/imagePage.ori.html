@@ -32,6 +32,9 @@
     </style>
   </head>
   <body>
-    ${ responsiveImage.js(`/images/${imageName}`, formats.yaml) }
+    <img
+      srcset="${ srcset.js(`/images/${imageName}`, formats.yaml) }"
+      sizes="100vw"
+    />
   </body>
 </html>
